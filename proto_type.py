@@ -13,9 +13,9 @@ import pyautogui
 # 재생버튼 찾아서 클릭
 def play():
     time.sleep(2)
-    loc = pyautogui.locateOnScreen("../IMGs/play.PNG", grayscale = True, confidence = 0.8)
+    loc = pyautogui.locateOnScreen("./IMGs/play.PNG", grayscale = True, confidence = 0.8)
     if loc == None:
-        loc = pyautogui.locateOnScreen("../IMGs/play2.PNG", grayscale = True, confidence = 0.5)
+        loc = pyautogui.locateOnScreen("./IMGs/play2.PNG", grayscale = True, confidence = 0.5)
 
         if loc == None:
             print("lecture type : youtube")
@@ -46,7 +46,7 @@ def tleft(time_, llecs):
         time.sleep(1)
 
 # 강의 링크와 시간 설정
-with open("../properties/lectures.ini", "r") as lec:
+with open("properties/lectures.ini", "r") as lec:
     lectures = []
     lrt = []
     while True:
@@ -92,10 +92,10 @@ for culec in range(len(lectures)):
     tleft(slt, leccon)
     leccon = []
 
-    with open("../properties/lectures.ini", "r") as lr:
+    with open("properties/lectures.ini", "r") as lr:
         leccon = lr.readlines()
 
-    with open("../properties/lectures.ini", "w") as lw:
+    with open("properties/lectures.ini", "w") as lw:
         for h in range(len(leccon)):
             if h == 0 or h == 1:
                 continue

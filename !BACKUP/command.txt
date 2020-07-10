@@ -1,0 +1,1 @@
+pyinstaller --hidden-import=sip --onefile --icon=icon.ico -p D:\!!!!!!!!!!!!!window10_SDK run.py
