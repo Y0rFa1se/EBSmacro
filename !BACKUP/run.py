@@ -12,19 +12,11 @@ import pyautogui
 
 # 재생버튼 찾아서 클릭
 def play():
-    time.sleep(2)
-    loc = pyautogui.locateOnScreen("IMGs/play.PNG", grayscale = True, confidence = 0.8)
+    time.sleep(5)
+    loc = pyautogui.locateOnScreen("IMGs/play.PNG", confidence = 0.9)
     if loc == None:
-        loc = pyautogui.locateOnScreen("IMGs/play2.PNG", grayscale = True, confidence = 0.5)
-
-        if loc == None:
-            print("lecture type : youtube")
-            pyautogui.click(1078, 672)
-
-        else:
-            print("detected play button2 location : ", end="")
-            print(loc)
-            pyautogui.click(pyautogui.center(loc))
+        print("play button isn't detected")
+        pyautogui.click(1078, 672)
     else:
         print("detected play button location : ", end = "")
         print(loc)
